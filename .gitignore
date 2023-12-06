@@ -1,0 +1,6 @@
+Miniconda3-latest-MacOSX-x86_64.sh
+.chainlit/
+chainlit.md
+__pycache__/
+models/
+venv/
