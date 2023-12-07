@@ -9,10 +9,8 @@ graph LR;
     end
 ```
 
-## Goals
-
- - Run a ChatGPT-like LLM (e.g. Llama 2) locally on my macOS (using [llama-cpp-python](https://github.com/abetlen/llama-cpp-python))
- - Run a ChatGPT-like UI/app locally on my macOS (using [chainlit](https://github.com/Chainlit/chainlit))
+ - Runs a ChatGPT-like LLM (e.g. Llama 2) locally (using [llama-cpp-python](https://github.com/abetlen/llama-cpp-python))
+ - Runs a ChatGPT-like UI/app locally (using [chainlit](https://github.com/Chainlit/chainlit))
 
 ## Setup
 
@@ -51,19 +49,24 @@ To use a different model:
 
 ## Usage
 
+### Model Server
+
 In one terminal, activate the virtualenv and run the model server with:
 ```
 ./run-server.sh
 ```
 
-This will run the Llama 7B chat model server (by default on port 8000).
+This will run the Llama 7B chat model inference server (by default on port 8000).
+
+### Chat UI
 
 In another terminal, activate the virtualenv and run the UI with:
 ```
 ./run-ui.sh
 ```
 
-This will open a ChatGPT-like UI in your browser using Chainlit (by default on port 8001).
+This will open a ChatGPT-like UI in your browser using Chainlit (by default on port 8001),
+connected to the inference server.
 
 ## Troubleshooting
 
