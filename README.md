@@ -76,5 +76,5 @@ It may be necessary to run the `llama_cpp.server` with an override configured fo
 to the path of the `.dylib` file created in the environment by the `llama-cpp-python` package.
 This can be found by running `find /path/to/venv -name '*.dylib'` in your venv (or Conda env).
 Attempting to build the llama C++ from scratch using https://github.com/ggerganov/llama.cpp resulted in
-a segmentation fault for me when attempting to run the `llama_cpp.server` module, so the library override
+a segmentation fault for me when running the `llama_cpp.server` module, so the library override
 using a pre-built library file seems to be more stable.
