@@ -11,7 +11,7 @@ graph LR;
 
 ## Goals
 
- - Run a ChatGPT-like LLM locally on my macOS (using [llama-cpp-python](https://github.com/abetlen/llama-cpp-python))
+ - Run a ChatGPT-like LLM (e.g. Llama 2) locally on my macOS (using [llama-cpp-python](https://github.com/abetlen/llama-cpp-python))
  - Run a ChatGPT-like UI/app locally on my macOS (using [chainlit](https://github.com/Chainlit/chainlit))
 
 ## Setup
@@ -43,9 +43,11 @@ huggingface-cli download \
     --local-dir-use-symlinks False
 ```
 
-This file format (GGUF) is compatible for running LLMs on macOS.
-To use a different model, make sure to update the `run-server.sh` script's
-`MODEL` variable after download.
+This model file format (GGUF) is used for running LLM inference on macOS.
+To use a different model:
+ 1. Update the above download command to use a different huggingface repo
+    and filename (must be in [GGUF](https://huggingface.co/models?sort=modified&search=gguf) format).
+ 3. Update the `run-server.sh` script's `MODEL` variable with the path to the `.gguf` file after download.
 
 ## Usage
 
